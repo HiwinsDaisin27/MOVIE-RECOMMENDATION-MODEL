@@ -35,6 +35,25 @@ The script prints evaluation metrics and saves the trained model.
 python src/predict_genre.py "A detective follows clues across a futuristic city to stop a rogue AI."
 ```
 
+## UI (Streamlit)
+
+```bash
+streamlit run src/app.py
+```
+
+The UI lets you train the model (if it does not exist) and predict genres from plot text.
+
+## Deployment (Docker)
+
+Build and run the container:
+
+```bash
+docker build -t movie-genre-classifier .
+docker run -p 8501:8501 movie-genre-classifier
+```
+
+Then open `http://localhost:8501` in your browser.
+
 ## Notes
 
 - Expand `data/movies.csv` with real-world data for better accuracy.
